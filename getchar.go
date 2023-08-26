@@ -6,7 +6,7 @@ import (
 )
 
 // Returns either an ascii code, or an arrow ("up", "down", "right", "left").
-func getChar() (ascii int, arrow string, err error) {
+func GetChar() (ascii int, arrow string, err error) {
 	t, _ := term.Open("/dev/tty")
 	err = term.RawMode(t)
 	if err != nil {
