@@ -25,9 +25,9 @@ import (
 ```go
 func main() {
   fmt.Print("Type any key:")
-	ascii, arrow, err := getchar.GetChar()
+  ascii, arrow, err := getchar.GetChar()
 
-	fmt.Println("\n", ascii, arrow, err)  
+  fmt.Println("\n", ascii, arrow, err)  
 }
 ```
 Example available in "test/test.go"
