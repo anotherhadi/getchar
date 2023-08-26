@@ -1,3 +1,4 @@
+// https://github.com/anotherhadi/getchar
 package getchar
 
 import (
