@@ -6,7 +6,7 @@ import (
 )
 
 // Returns either an ascii code, or an arrow ("up", "down", "right", "left").
-func GetChar() (ascii int, arrow string, err error) {
+func GetChar() (ascii uint8, arrow string, err error) {
 	t, _ := term.Open("/dev/tty")
 	err = term.RawMode(t)
 	if err != nil {
@@ -32,7 +32,7 @@ func GetChar() (ascii int, arrow string, err error) {
 			arrow = "left"
 		}
 	} else if numRead == 1 {
-		ascii = int(bytes[0])
+		ascii = uint8(bytes[0])
 	}
 	err = t.Restore()
 	if err != nil {
